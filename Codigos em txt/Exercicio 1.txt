@@ -1,0 +1,31 @@
+int main (){
+//Exercicio 1: Fazer um programa de ajuda aos vendedores
+	float valor, comissao, totalvend;
+	float descontoavis = 0.1;
+	
+	printf("Digite o valor total das compras: \n");
+	scanf("%f", &valor);
+	
+	// Desconto de 10% validos somente para compras a vista
+	printf("Total a pagar a vista com 10 porcento de desconto: \n");
+	totalvend = valor * descontoavis;
+	descontoavis = valor -  totalvend;
+	printf("%.2f \n", descontoavis);
+	
+	// O valor pago em 3x perde o desconto de 10% 
+	printf("Valor a pagar em 3x: \n");
+	totalvend = valor /3;
+	printf("%.2f \n", totalvend);
+	
+	// Comissão do vendedor 5%
+	printf("Comissao do vendedor nesta venda com o pagamento a vista sera de: \n");
+	comissao = descontoavis * 0.05;
+	printf("%2.f \n", comissao);
+	
+	// Comissao em compra parcelada
+	printf("Comissao do vendedor caso a venda seja parcelada: \n");
+	comissao = valor * 0.05;
+	printf("%2.f \n", comissao);
+	
+	system("pause");
+	return 0;
