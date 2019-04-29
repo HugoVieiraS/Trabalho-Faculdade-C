@@ -1,0 +1,27 @@
+#include <stdio.h> 
+#include <stdlib.h>
+
+int main (){
+	int n, i, j;
+	int count = 0;
+	int multiplo = 0;
+	
+	printf("Digite o numero de N: \n");
+	scanf("%d", &n);
+	printf("Digite o valor de I: \n");
+	scanf("%d", &i);
+	printf("Digite o valor de J: \n");
+	scanf("%d", &j);
+	
+	while (count < n){
+      if (multiplo%i == 0 || multiplo%j == 0){
+	  	  printf(" %d", multiplo);
+          count = count + 1;;
+	}
+      multiplo = multiplo + 1; 
+    }
+  	  printf("\n"); 
+
+	system("pause");
+	return 0;	
+}
